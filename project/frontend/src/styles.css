@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-evil-900 text-gray-100 antialiased; }
+  ::-webkit-scrollbar { @apply w-1.5; }
+  ::-webkit-scrollbar-track { @apply bg-evil-800; }
+  ::-webkit-scrollbar-thumb { @apply bg-evil-600 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-evil-500; }
+}
+
+@layer components {
+  .panel { @apply bg-evil-800/80 backdrop-blur-sm border border-evil-600/50 rounded-xl p-4; }
+  .panel-header { @apply text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-3 flex items-center gap-2; }
+  .stat-value { @apply text-2xl font-mono font-bold; }
+  .stat-label { @apply text-[10px] text-gray-500 uppercase tracking-wider; }
+  .btn-primary { @apply px-4 py-2 bg-evil-accent text-evil-900 font-bold text-sm rounded-lg hover:brightness-110 active:scale-95 transition-all; }
+  .btn-secondary { @apply px-4 py-2 bg-evil-700 text-gray-300 font-medium text-sm rounded-lg hover:bg-evil-600 active:scale-95 transition-all; }
+  .agent-card { @apply flex items-center gap-3 p-3 rounded-lg border transition-all; }
+  .agent-idle { @apply bg-evil-700/50 border-evil-600/30 border-l-4 border-l-green-500; }
+  .agent-processing { @apply bg-evil-700/80 border-evil-600/50 border-l-4 border-l-yellow-400 animate-pulse; }
+  .agent-error { @apply bg-evil-700/50 border-evil-600/30 border-l-4 border-l-red-500; }
+  .log-entry { @apply text-xs font-mono py-1.5 px-2 border-b border-evil-700/30; }
+  .badge { @apply text-[10px] font-bold uppercase px-2 py-0.5 rounded-full; }
+  .badge-green { @apply bg-green-500/20 text-green-400; }
+  .badge-yellow { @apply bg-yellow-500/20 text-yellow-400; }
+  .badge-red { @apply bg-red-500/20 text-red-400; }
+  .badge-blue { @apply bg-blue-500/20 text-blue-400; }
+  .input-field { @apply w-full bg-evil-700 border border-evil-600 rounded-lg px-3 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-evil-accent transition-colors font-mono; }
+}
